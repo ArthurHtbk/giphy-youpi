@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap");
+
+:root {
+  --title-text: "Press Start 2P", cursive;
+  --regular-text: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  font-size: 3rem;
+  font-family: var(--title-text);
+  background-color: #e646b6;
+  background-image: linear-gradient(90deg, #d636e6, #ff8556);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+section {
+  min-height: calc(100vh - 250px);
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+section div {
+  flex: 1;
+}
+
+.search,
+.selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.selected {
+  margin-bottom: 50px;
+}
+
+.search input {
+  background-color: transparent;
+  height: 40px;
+  width: 300px;
+  padding-left: 10px;
+  border: solid 5px;
+  border-image-source: linear-gradient(90deg, #d636e6, #ff8556);
+  border-image-slice: 1;
   color: white;
+  font-family: var(--regular-text);
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.gallery {
+  line-height: 0;
+  column-count: 3;
+  column-gap: 10px;
+  margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gif-image {
+  width: 450px;
+  cursor: pointer;
+}
+
+p,
+span {
+  color: white;
+  font-family: var(--regular-text);
+}
+
+.filter,
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.filter button,
+.pages button,
+.filter span {
+  margin: 0 25px;
+}
+
+.filter button,
+.pages button {
+  background-color: transparent;
+  height: 50px;
+  border: solid 5px;
+  border-image-source: linear-gradient(90deg, #d636e6, #ff8556);
+  border-image-slice: 1;
+  color: white;
+  font-family: var(--regular-text);
+
+  padding: 0 25px;
+}
+
+.filter button:hover,
+.pages button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.pages button {
+  font-size: 1.5rem;
+}
+
+.filter button {
+  font-size: 2rem;
+}
+
+footer {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-family: var(--regular-text);
+  font-size: 1rem;
+  color: white;
 }
