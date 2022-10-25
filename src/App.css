@@ -74,7 +74,7 @@ section div {
 }
 
 .gif-image {
-  width: 450px;
+  width: 370px;
   cursor: pointer;
 }
 
@@ -93,8 +93,7 @@ span {
 }
 
 .filter button,
-.pages button,
-.filter span {
+.pages button {
   margin: 0 25px;
 }
 
@@ -107,7 +106,6 @@ span {
   border-image-slice: 1;
   color: white;
   font-family: var(--regular-text);
-
   padding: 0 25px;
 }
 
