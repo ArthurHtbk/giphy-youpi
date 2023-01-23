@@ -12,12 +12,10 @@ const Gifs = () => {
   const [limit, setLimit] = useState(10);
   const [offset, setOffset] = useState(0);
 
-  const API_PUBLIC_KEY = "fLAPyOv83MRfVK1BEW1YxCQCgbyWF0Fw";
-
   useEffect(() => {
     axios
       .get(
-        `https://api.giphy.com/v1/gifs/search?api_key=${API_PUBLIC_KEY}&q=${value}&limit=${limit}&offset=${offset}&rating=g`
+        `https://giphy-back-production.up.railway.app/gifs?value=${value}&limit=${limit}&offset=${offset}`
       )
       .then((response) => {
         setData(response.data);
