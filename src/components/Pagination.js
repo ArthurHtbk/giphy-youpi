@@ -1,38 +1,22 @@
-const Pagination = ({ limit, setLimit, offset, setOffset }) => {
+const Pagination = () => {
   return (
     <div className="pagination">
       <div className="filter">
-        {limit > 5 && (
-          <button
-            onClick={() => {
-              setLimit((limit -= 5));
-              setOffset(0);
-            }}
-          >
+          <button>
             -
           </button>
-        )}
-        <span>Display</span>
-        <span className="title">{limit}</span>
-        <span>results at a time</span>
-        {limit < 50 && (
-          <button
-            onClick={() => {
-              setLimit((limit += 5));
-              setOffset(0);
-            }}
-          >
+        <span>No results</span>
+        <span className="title"></span>
+        <span>yet</span>
+          <button>
             +
           </button>
-        )}
       </div>
       <div className="pages">
-        {offset && (
-          <button onClick={() => setOffset((offset -= limit))}>
+          <button>
             Previous page
           </button>
-        )}
-        <button onClick={() => setOffset((offset += limit))}>Next page</button>
+        <button>Next page</button>
       </div>
     </div>
   );

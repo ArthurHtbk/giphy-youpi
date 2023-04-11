@@ -1,10 +1,9 @@
-const Gif = ({ gif, setSelectedGif }) => {
+const Gif = () => {
   return (
     <img
       className="gif-image"
-      src={gif.images.downsized.url}
-      alt={gif.title}
-      onClick={() => setSelectedGif(gif)}
+      src="https://www.giantfreakinrobot.com/wp-content/uploads/2022/08/rick-astley.jpg"
+      alt=""
     />
   );
 };
