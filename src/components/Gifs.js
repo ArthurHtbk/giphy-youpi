@@ -4,6 +4,7 @@ import Selected from "./Selected";
 import Search from "./Search";
 import Pagination from "./Pagination";
 
+
 const Gifs = () => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -15,12 +16,11 @@ const Gifs = () => {
   useEffect(() => {
     axios
       .get(
-        `https://giphy-back-production.up.railway.app/gifs?value=${value}&limit=${limit}&offset=${offset}`
+        `https://api.giphy.com/v1/gifs/search?api_key=${process.env.REACT_APP_GIPHY_API_KEY}&q=${value}&limit=${limit}&offset=${offset}&rating=g`
       )
       .then((response) => {
         setData(response.data);
         setIsLoading(false);
-        console.log(response.data);
       })
       .catch((error) => console.log(error.message));
   }, [value, limit, offset]);
